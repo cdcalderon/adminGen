@@ -11,6 +11,8 @@ import {ProgressComponent} from './progress/progress.component';
 import {ChartsComponent} from './charts/charts.component';
 
 
+// TODO: Temporal
+import {IncrementerComponent} from '../components/incrementer/incrementer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import {ChartsComponent} from './charts/charts.component';
     DashboardComponent,
     ProgressComponent,
     ChartsComponent,
+    IncrementerComponent
   ],
   exports: [
     DashboardComponent,

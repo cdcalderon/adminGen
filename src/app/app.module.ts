@@ -10,17 +10,13 @@ import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
-import { IncrementincrementerComponent } from './components/incrementincrementer/incrementincrementer.component';
-import { IncrementerComponent } from './components/incrementer/incrementer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
-    IncrementincrementerComponent,
-    IncrementerComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

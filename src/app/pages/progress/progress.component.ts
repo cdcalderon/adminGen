@@ -14,17 +14,4 @@ export class ProgressComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateProgress(value) {
-    if (this.progress >= 100 && value > 0) {
-      this.progress = 100;
-      return;
-    }
-
-    if (this.progress <= 0 && value < 0) {
-      this.progress = 0;
-      return;
-    }
-    this.progress = this.progress + value;
-  }
-
 }
