@@ -28,7 +28,7 @@
     <div class="card">
       <div class="card-body">
 
-        <app-incrementer label="Left Progress" [progress]="20"></app-incrementer>
+        <app-incrementer label="Left Progress" (progressChanged)="updateProgress($event)" [progress]="progress"></app-incrementer>
 
       </div>
     </div>
@@ -38,7 +38,7 @@
     <div class="card">
       <div class="card-body">
 
-        <app-incrementer label="Right Progress" [progress]="40"></app-incrementer>
+        <app-incrementer label="Right Progress" (progressChanged)="updateProgress($event)" [progress]="progress"></app-incrementer>
 
       </div>
     </div>
