@@ -13,6 +13,7 @@
          class="form-control"
          name="progress"
          [(ngModel)]="progress"
+         (ngModelChange)="onChange($event)"
          min="1"
          max="100">
 
