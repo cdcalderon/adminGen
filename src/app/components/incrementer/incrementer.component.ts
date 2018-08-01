@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-incrementer',
@@ -6,6 +6,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styles: []
 })
 export class IncrementerComponent implements OnInit {
+  @ViewChild('txtProgress') txtProgress: ElementRef;
+
   @Input()label: string = 'placeholder';
   @Input()progress: number = 50;
   @Output() progressChanged: EventEmitter<number> = new EventEmitter();
@@ -30,8 +32,8 @@ export class IncrementerComponent implements OnInit {
   }
 
   onChange(value: number) {
-    const elemHTML: any = document.getElementsByName('progress')[0];
-    elemHTML.value = Number( this.progress);
+    // const elemHTML: any = document.getElementsByName('progress')[0];
+    // elemHTML.value = Number( this.progress);
 
     if ( value >= 100) {
       this.progress = 100;
@@ -40,6 +42,9 @@ export class IncrementerComponent implements OnInit {
     } else {
       this.progress = value;
     }
+
+    // NOTE: This is required to avoid issue with input text of having 033 , 044 etc value
+    this.txtProgress.nativeElement.value = this.progress;
     this.progressChanged.emit(this.progress);
 
 }}
