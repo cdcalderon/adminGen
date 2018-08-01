@@ -46,5 +46,6 @@ export class IncrementerComponent implements OnInit {
     // NOTE: This is required to avoid issue with input text of having 033 , 044 etc value
     this.txtProgress.nativeElement.value = this.progress;
     this.progressChanged.emit(this.progress);
+    this.txtProgress.nativeElement.focus();
 
 }}
