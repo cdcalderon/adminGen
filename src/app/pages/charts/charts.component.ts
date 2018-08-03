@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsComponent implements OnInit {
 
-  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-  public doughnutChartData:number[] = [350, 450, 100];
-  public doughnutChartType:string = 'doughnut';
+  charts: any = {
+    'chart1': {
+      'labels': ['t1', 't2', 't3'],
+      'data':  [24, 30, 46],
+      'type': 'doughnut',
+      'leyend': 'Test 1'
+    },
+    'chart2': {
+      'labels': ['men', 'women'],
+      'data':  [4500, 6000],
+      'type': 'doughnut',
+      'leyend': 'Test 2'
+    },
+    'chart3': {
+      'labels': ['Yes', 'No'],
+      'data':  [95, 5],
+      'type': 'doughnut',
+      'leyend': 'Test 3'
+    },
+    'chart4': {
+      'labels': ['No', 'Yes'],
+      'data':  [85, 15],
+      'type': 'doughnut',
+      'leyend': 'Test 4'
+    },
+  };
 
   constructor() { }
 

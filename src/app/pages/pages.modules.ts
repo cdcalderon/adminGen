@@ -12,10 +12,11 @@ import {PagesComponent} from './pages.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {ProgressComponent} from './progress/progress.component';
 import {ChartsComponent} from './charts/charts.component';
-
+import {DonutChartComponent} from '../components/donut-chart/donut-chart.component';
 
 // TODO: Temporal
 import {IncrementerComponent} from '../components/incrementer/incrementer.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {IncrementerComponent} from '../components/incrementer/incrementer.compon
     DashboardComponent,
     ProgressComponent,
     ChartsComponent,
-    IncrementerComponent
+    IncrementerComponent,
+    DonutChartComponent
   ],
   exports: [
     DashboardComponent,
