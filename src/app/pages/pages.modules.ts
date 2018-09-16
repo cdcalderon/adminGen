@@ -16,7 +16,7 @@ import {DonutChartComponent} from '../components/donut-chart/donut-chart.compone
 
 // TODO: Temporal
 import {IncrementerComponent} from '../components/incrementer/incrementer.component';
-import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
+import {AccountSettingsComponent} from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
     ChartsComponent,
     IncrementerComponent,
     DonutChartComponent,
-    AccoutSettingsComponent
+    AccountSettingsComponent
   ],
   exports: [
     DashboardComponent,
