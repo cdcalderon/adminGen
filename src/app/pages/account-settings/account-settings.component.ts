@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 
 @Component({
@@ -6,13 +6,9 @@ import {DOCUMENT} from '@angular/platform-browser';
   templateUrl: './account-settings.component.html',
   styles: []
 })
-export class AccountSettingsComponent implements OnInit {
+export class AccountSettingsComponent  {
 
   constructor(@Inject(DOCUMENT) private _document) { }
-
-  ngOnInit() {
-
-  }
 
   changeThemeColor(theme: string, link: any) {
     console.log(theme);
