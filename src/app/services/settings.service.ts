@@ -13,4 +13,8 @@ export class SettingsService {
     };
   }
 
+  saveSettings() {
+    localStorage.setItem('ui-settings', JSON.stringify(this.saveSettings()));
+  }
+
 }
