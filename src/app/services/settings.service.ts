@@ -17,4 +17,12 @@ export class SettingsService {
     localStorage.setItem('ui-settings', JSON.stringify(this.saveSettings()));
   }
 
+  loadSettings()  {
+    if ( localStorage.getItem('ui-settings') ) {
+      this.settings = JSON.parse(localStorage.getItem('ui-settings'));
+    } else {
+      console.log('using default config values');
+    }
+  }
+
 }
