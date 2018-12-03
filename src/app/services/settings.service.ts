@@ -15,6 +15,7 @@ export class SettingsService {
 
   saveSettings() {
     localStorage.setItem('ui-settings', JSON.stringify(this.saveSettings()));
+    localStorage.setItem('ui-settings-Time', JSON.stringify(new Date()));
   }
 
   loadSettings()  {
