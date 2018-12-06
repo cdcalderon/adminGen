@@ -1,5 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
+import {SettingsService} from '../../services/settings.service';
 
 @Component({
   selector: 'app-account-settings',
@@ -8,13 +9,16 @@ import {DOCUMENT} from '@angular/platform-browser';
 })
 export class AccountSettingsComponent  {
 
-  constructor(@Inject(DOCUMENT) private _document) { }
+  constructor(@Inject(DOCUMENT) private _document, private settings: SettingsService) { }
 
   changeThemeColor(theme: string, link: any) {
     console.log(theme);
     this.setSelectedCheck(link);
     const url = `assets/css/colors/${theme}.css`;
     this._document.getElementById('theme').setAttribute('href', url);
+
+    this.settings.settings.theme = theme;
+    this.settings.settings.themeUrl = url;
   }
 
   setSelectedCheck(link: any) {
