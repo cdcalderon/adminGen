@@ -7,10 +7,11 @@ export class SettingsService {
   settings: Setting;
 
   constructor() {
-    this.settings = {
-      themeUrl: 'assets/css/colors/default.css',
-      theme: 'default'
-    };
+    // this.settings = {
+    //   themeUrl: 'assets/css/colors/default.css',
+    //   theme: 'default'
+    // };
+    this.loadSettings();
   }
 
   saveSettings() {
