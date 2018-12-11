@@ -12,13 +12,9 @@ export class AccountSettingsComponent  {
   constructor(@Inject(DOCUMENT) private _document, private settings: SettingsService) { }
 
   changeThemeColor(theme: string, link: any) {
-    console.log(theme);
     this.setSelectedCheck(link);
-    const url = `assets/css/colors/${theme}.css`;
-    this._document.getElementById('theme').setAttribute('href', url);
 
-    this.settings.settings.theme = theme;
-    this.settings.settings.themeUrl = url;
+    this.settings.applyTheme(theme);
   }
 
   setSelectedCheck(link: any) {
