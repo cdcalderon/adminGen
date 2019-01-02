@@ -1,5 +1,5 @@
 import {Inject, Injectable} from '@angular/core';
-import {Setting} from '../shared/models/setting';
+import {Setting} from '../../shared/models/setting';
 import {DOCUMENT} from '@angular/platform-browser';
 
 @Injectable()
