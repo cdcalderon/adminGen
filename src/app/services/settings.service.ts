@@ -8,15 +8,15 @@ export class SettingsService {
   settings: Setting;
 
   constructor(@Inject(DOCUMENT) private _document) {
-    // this.settings = {
-    //   themeUrl: 'assets/css/colors/default.css',
-    //   theme: 'default'
-    // };
+    this.settings = {
+      themeUrl: 'assets/css/colors/default.css',
+      theme: 'default'
+    };
     this.loadSettings();
   }
 
   saveSettings() {
-    localStorage.setItem('ui-settings', JSON.stringify(this.saveSettings()));
+    localStorage.setItem('ui-settings', JSON.stringify(this.settings));
     localStorage.setItem('ui-settings-Time', JSON.stringify(new Date()));
   }
 
