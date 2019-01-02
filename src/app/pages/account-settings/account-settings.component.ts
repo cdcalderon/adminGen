@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import {SettingsService} from '../../services/settings.service';
 
@@ -7,9 +7,13 @@ import {SettingsService} from '../../services/settings.service';
   templateUrl: './account-settings.component.html',
   styles: []
 })
-export class AccountSettingsComponent  {
+export class AccountSettingsComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private _document, private settings: SettingsService) { }
+
+  ngOnInit() {
+    this.placeThemeCheck();
+  }
 
   changeThemeColor(theme: string, link: any) {
     this.setSelectedCheck(link);
@@ -25,6 +29,19 @@ export class AccountSettingsComponent  {
     }
 
     link.classList.add('working');
+  }
+
+  placeThemeCheck() {
+    const theme = this.settings.settings.theme;
+
+    const selectors: any = this._document.getElementsByClassName('selector');
+
+    for ( const ref of selectors ) {
+      if ( ref.getAttribute('data-theme') === theme ) {
+        ref.classList.add('working');
+      }
+    }
+
   }
 
 }
