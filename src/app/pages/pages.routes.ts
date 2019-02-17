@@ -8,8 +8,7 @@ import {AccountSettingsComponent} from './account-settings/account-settings.comp
 
 const pagesRoutes: Routes = [
   {
-    path: '',
-    component: PagesComponent,
+    path: '', component: PagesComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'progress', component: ProgressComponent },
